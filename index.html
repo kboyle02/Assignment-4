@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Krystle's Animation Trigger</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="pane">
+    <section class="start">
+        <img class="protagonist" src="matcha.gif" />
+    </section>
+    <main>
+        <div class="wrapper">
+            <section class="slide one">
+                <article class="vh-center">
+                    <p class="center">matcha comin' at cha'</p>
+                </article>
+            </section>
+            <section class="slide two">
+                <article class="vh-center">
+                    <p class="center">with a big batcha'</p>
+                </article>
+            </section>
+            <section class="slide three">
+                <article class="vh-center">
+                    <p class="center">comin' in hot like sriracha</p>
+                </article>
+            </section>
+            <section class="slide four">
+                <article class="vh-center">
+                    <p class="center">dancing like la cucaracha</p>
+                </article>
+            </section>
+            <section class="slide five">
+                <article class="vh-center">
+                    <p class="center">when it comes to green, we gotcha'</p>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+
+    <script>
+   
+      var $two = $(".two")
+
+      $two.waypoint(
+        function (direction) {
+          $(".protagonist").addClass("flip")
+        },
+        { offset: "0%", horizontal: true }
+      )
+
+      $two.waypoint(
+        function (direction) {
+          $("p").removeClass("hidden")
+        },
+        { offset: "0%", horizontal: true }
+      )
+
+      $two.waypoint(
+        function (direction) {
+          $(".protagonist").removeClass("hidden")
+        },
+        { offset: "0%", horizontal: true }
+      )
+
+      $(".three").waypoint(
+        function () {
+          $(".protagonist").removeClass("flip2")
+        },
+        { offset: "50%", horizontal: true }
+      )
+
+      $(".three").waypoint(
+        function () {
+          $(".protagonist").css("filter", "hue-rotate(90deg)")
+        },
+        { offset: "50%", horizontal: true }
+      )
+
+      $(".four").waypoint(
+        function () {
+          $(".protagonist").addClass("shrink")
+        },
+        { offset: "50%", horizontal: true }
+      )
+
+      $(".five").waypoint(
+        function () {
+          $(".protagonist").removeClass("shrink")
+        },
+        { offset: "50%", horizontal: true }
+      )
+    
+    </script>
+</body>
+
+</html>

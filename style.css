@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: green;
+    position: relative;
+}
+
+img {
+    height: 600px;
+    width: 600px;
+}
+
+p {
+    color: white;
+}
+
+.protagonist {
+    padding: 120px;
+    z-index: 1;
+    position: sticky;
+    top: 100px;
+    left: 600px;
+    border-radius: 50%;
+    filter: hue-rotate(0deg);
+    transition: transform 2s;
+}
+
+.flip {
+    transform: scaleX(-1);
+}
+
+.flip2 {
+    transform: scaleX(-10);
+}
+
+.shrink {
+    transform: rotate(0.5turn);
+    
+}
+
+
+main {
+    z-index: -1;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 500vw;
+}
+
+.wrapper section {
+    width: 100vw;
+}
+
+.vh-center {
+    margin: 120px auto;
+    width: 80%;
+    height: 80%;
+}
+
+.start {
+    height: 100vh;
+    width: 500vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.one {
+    font-size: 70px;
+    background-image: url(backgroundstripes.jpg);
+    background-size: cover;
+}
+
+.two {
+    font-size: 70px;
+    background-image: url(matchabg.jpg);
+    background-repeat: repeat;
+    background-size: 80px;
+}
+
+.three {
+    font-size: 70px;
+    background-image: url(racha.jpg);
+    background-repeat: repeat;
+    background-size: 50px;
+}
+
+.four {
+    font-size: 70px;
+    background-image: url(cucaracha.gif);
+    background-size: cover;
+}
+
+.five {
+    font-size: 70px;
+    background-image: url(gotcha.gif);
+    background-size: cover;
+}
+
+.center {
+    text-align: center;
+}
